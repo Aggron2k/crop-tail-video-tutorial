@@ -3,8 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ctpbxb7femp3m" path="res://assets/game/characters/free_chicken_sprites.png" id="1_be5x3"]
 [ext_resource type="Script" uid="uid://fhhu12733v2r" path="res://scenes/characters/chicken/chicken.gd" id="1_r6a33"]
 [ext_resource type="Script" uid="uid://b246lwy1xphdt" path="res://script/state_machine/node_state_machine.gd" id="2_rsly8"]
-[ext_resource type="Script" uid="uid://cp6ehpg40jmfl" path="res://scenes/characters/chicken/idle_state.gd" id="3_awcwn"]
-[ext_resource type="Script" uid="uid://jlo0pp0sj82e" path="res://scenes/characters/chicken/walk_state.gd" id="4_31inw"]
+[ext_resource type="Script" uid="uid://jlo0pp0sj82e" path="res://scenes/characters/npc_states/walk_state.gd" id="4_31inw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rsly8"]
 atlas = ExtResource("1_be5x3")
@@ -64,6 +63,50 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
 radius = 4.0
 
+[sub_resource type="GDScript" id="GDScript_31inw"]
+script/source = "extends NodeState
+
+@export var character: CharacterBody2D
+@export var animated_sprite_2d: AnimatedSprite2D
+@export var idle_state_time_interval: float = 5.0
+
+@onready var idle_state_timer: Timer = Timer.new()
+
+var idle_state_timeout: bool = false
+
+func _ready() -> void:
+	idle_state_timer.wait_time = idle_state_time_interval
+	idle_state_timer.timeout.connect(on_idle_state_timeout)
+	add_child(idle_state_timer)
+
+func _on_process(_delta : float) -> void:
+	pass
+
+func _on_physics_process(_delta : float) -> void:
+	pass
+
+
+func _on_next_transitions() -> void:
+	if idle_state_timeout:
+		transition.emit(\"Walk\")
+
+
+func _on_enter() -> void:
+	animated_sprite_2d.play(\"idle\")
+	
+	idle_state_timeout = false
+	idle_state_timer.start()
+
+
+func _on_exit() -> void:
+	animated_sprite_2d.stop()
+	idle_state_timer.stop()
+	
+	
+func on_idle_state_timeout() -> void:
+	idle_state_timeout = true
+"
+
 [node name="Chicken" type="CharacterBody2D" unique_id=1517388262]
 script = ExtResource("1_r6a33")
 
@@ -88,7 +131,7 @@ script = ExtResource("2_rsly8")
 initial_node_state = NodePath("Idle")
 
 [node name="Idle" type="Node" parent="StateMachine" unique_id=721273382 node_paths=PackedStringArray("character", "animated_sprite_2d")]
-script = ExtResource("3_awcwn")
+script = SubResource("GDScript_31inw")
 character = NodePath("../..")
 animated_sprite_2d = NodePath("../../AnimatedSprite2D")
 
