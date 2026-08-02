@@ -101,6 +101,7 @@ func on_idle_state_timeout() -> void:
 "
 
 [node name="Cow" type="CharacterBody2D" unique_id=790294806]
+collision_layer = 64
 script = ExtResource("1_j7g5r")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1663585449]
@@ -118,6 +119,7 @@ debug_color = Color(0, 0.6, 0.7019608, 0.41960785)
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1522772607]
 navigation_layers = 2
+path_postprocessing = 1
 avoidance_enabled = true
 
 [node name="StateMachine" type="Node" parent="." unique_id=2140980671 node_paths=PackedStringArray("initial_node_state")]

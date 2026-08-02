@@ -19,6 +19,10 @@ run/main_scene="uid://cypnfo8athbvx"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+ToolManager="*uid://o75v6tm18f3m"
+
 [display]
 
 window/size/viewport_width=640
@@ -37,6 +41,10 @@ folder_colors={
 "res://scenes/": "green",
 "res://script/": "pink"
 }
+
+[global_group]
+
+navigation_polygon_source_geometry_group=""
 
 [input]
 
@@ -75,10 +83,12 @@ hit={
 2d_physics/layer_1="Ground"
 2d_navigation/layer_1="ChickenNavigation"
 2d_physics/layer_2="Player"
+2d_navigation/layer_2="CowNavigation"
 2d_physics/layer_3="Interactable"
 2d_physics/layer_4="Tool"
 2d_physics/layer_5="Object"
 2d_physics/layer_6="Collectable"
+2d_physics/layer_7="NPC"
 
 [rendering]
 
