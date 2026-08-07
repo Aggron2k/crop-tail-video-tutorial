@@ -2,6 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://csl0invwy37p6" path="res://scenes/UI/game_ui_theme.tres" id="1_bqvx0"]
 [ext_resource type="Texture2D" uid="uid://spm2xikcriss" path="res://assets/game/objects/basic_tools_and_meterials.png" id="2_rl7gc"]
+[ext_resource type="Script" uid="uid://b2muju6iy1jkh" path="res://scenes/UI/inventory_panel.gd" id="2_snlhh"]
 [ext_resource type="Texture2D" uid="uid://clmve45qh0c3v" path="res://assets/game/objects/basic_plants.png" id="3_owml0"]
 [ext_resource type="Texture2D" uid="uid://homr4n6gvua" path="res://assets/game/objects/egg_item.png" id="4_y860g"]
 [ext_resource type="Texture2D" uid="uid://c0r4oajnl1rjv" path="res://assets/game/objects/simple_milk_and_grass_item.png" id="5_snlhh"]
@@ -34,6 +35,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 theme = ExtResource("1_bqvx0")
 theme_type_variation = &"DarkWoodPanel"
+script = ExtResource("2_snlhh")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1137664139]
 layout_mode = 2
