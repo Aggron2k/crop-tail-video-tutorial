@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://bpay6g7ocncqf"]
+
+[node name="PanelContainer" type="PanelContainer" unique_id=1014825525]
+offset_right = 40.0
+offset_bottom = 40.0
