@@ -1,5 +1,60 @@
 [gd_scene format=3 uid="uid://bpay6g7ocncqf"]
 
-[node name="PanelContainer" type="PanelContainer" unique_id=1014825525]
+[ext_resource type="Theme" uid="uid://csl0invwy37p6" path="res://scenes/UI/game_ui_theme.tres" id="1_bqvx0"]
+[ext_resource type="Texture2D" uid="uid://spm2xikcriss" path="res://assets/game/objects/basic_tools_and_meterials.png" id="2_rl7gc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bqvx0"]
+atlas = ExtResource("2_rl7gc")
+region = Rect2(16, 16, 16, 16)
+
+[node name="InventoryPanel" type="PanelContainer" unique_id=1014825525]
 offset_right = 40.0
 offset_bottom = 40.0
+theme = ExtResource("1_bqvx0")
+theme_type_variation = &"DarkWoodPanel"
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1137664139]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=148705567]
+layout_mode = 2
+
+[node name="Logs" type="PanelContainer" parent="MarginContainer/VBoxContainer" unique_id=1650527428]
+custom_minimum_size = Vector2(26, 32)
+layout_mode = 2
+theme_type_variation = &"InventoryItemPanel"
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Logs" unique_id=340523414]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = SubResource("AtlasTexture_bqvx0")
+
+[node name="LogLabel" type="Label" parent="MarginContainer/VBoxContainer/Logs" unique_id=938144744]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_type_variation = &"InventoryLabel"
+text = "0"
+
+[node name="Stone" type="PanelContainer" parent="MarginContainer/VBoxContainer" unique_id=856947326]
+custom_minimum_size = Vector2(26, 32)
+layout_mode = 2
+theme_type_variation = &"InventoryItemPanel"
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Stone" unique_id=14312140]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = SubResource("AtlasTexture_bqvx0")
+
+[node name="StoneLabel" type="Label" parent="MarginContainer/VBoxContainer/Stone" unique_id=940529615]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_type_variation = &"InventoryLabel"
+text = "0"
