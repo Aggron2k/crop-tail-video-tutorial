@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://qqkaeikjlvfh"]
 
 [ext_resource type="Theme" uid="uid://csl0invwy37p6" path="res://scenes/UI/game_ui_theme.tres" id="1_f33qi"]
+[ext_resource type="Script" uid="uid://cmwdwmxnx57gm" path="res://scenes/UI/day_and_night_panel.gd" id="2_fxwl7"]
 
 [node name="DayAndNightPanel" type="Control" unique_id=454840859]
 layout_mode = 3
@@ -12,6 +13,7 @@ offset_bottom = 11.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_f33qi")
+script = ExtResource("2_fxwl7")
 
 [node name="DayPanel" type="PanelContainer" parent="." unique_id=2005201261]
 layout_mode = 0
