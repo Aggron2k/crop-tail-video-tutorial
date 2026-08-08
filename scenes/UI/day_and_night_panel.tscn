@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://qqkaeikjlvfh"]
+
+[ext_resource type="Theme" uid="uid://csl0invwy37p6" path="res://scenes/UI/game_ui_theme.tres" id="1_f33qi"]
+
+[node name="DayAndNightPanel" type="Control" unique_id=454840859]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 11.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_f33qi")
+
+[node name="DayPanel" type="PanelContainer" parent="." unique_id=2005201261]
+layout_mode = 0
+offset_top = -11.0
+offset_right = 80.0
+offset_bottom = 15.0
+theme_type_variation = &"DayAndNightCounterPanel"
+
+[node name="MarginContainer" type="MarginContainer" parent="DayPanel" unique_id=520166407]
+layout_mode = 2
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="Label" type="Label" parent="DayPanel/MarginContainer" unique_id=1790631293]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"DayAndNightLabel"
+text = "DAY 0"
+
+[node name="TimePanel" type="PanelContainer" parent="." unique_id=728396632]
+layout_mode = 0
+offset_top = 17.0
+offset_right = 80.0
+offset_bottom = 43.0
+theme_type_variation = &"DayAndNightCounterPanel"
+
+[node name="MarginContainer" type="MarginContainer" parent="TimePanel" unique_id=1460826468]
+layout_mode = 2
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="Label" type="Label" parent="TimePanel/MarginContainer" unique_id=1671445000]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"DayAndNightLabel"
+text = "12:00"
+
+[node name="Control" type="Control" parent="." unique_id=1471884441]
+anchors_preset = 0
+offset_top = 45.0
+offset_right = 40.0
+offset_bottom = 85.0
+
+[node name="NormalSpeedButton" type="Button" parent="Control" unique_id=932286057]
+layout_mode = 0
+offset_right = 26.0
+offset_bottom = 18.0
+theme_type_variation = &"DayAndNightButton"

@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dcdema7rk1yxr" path="res://assets/ui/basic_ui_sprites.png" id="1_rpqwa"]
 [ext_resource type="FontVariation" uid="uid://c811iknqaf3jo" path="res://assets/ui/fonts/zx_palm_variation.tres" id="2_63rmd"]
+[ext_resource type="FontFile" uid="uid://bxw705oyomdfh" path="res://assets/ui/fonts/pixelFont-7-8x14-sproutLands.ttf" id="2_k5kyg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3epjq"]
 atlas = ExtResource("1_rpqwa")
@@ -15,6 +16,73 @@ texture_margin_right = 7.0
 texture_margin_bottom = 7.0
 region_rect = Rect2(0, 0, 30, 30)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_wgy6h"]
+atlas = ExtResource("1_rpqwa")
+region = Rect2(59, 11, 26, 26)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_egbks"]
+texture = SubResource("AtlasTexture_wgy6h")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mymdo"]
+atlas = ExtResource("1_rpqwa")
+region = Rect2(59, 59, 26, 26)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_64sb7"]
+texture = SubResource("AtlasTexture_mymdo")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qbwhy"]
+atlas = ExtResource("1_rpqwa")
+region = Rect2(59, 107, 26, 26)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wgy6h"]
+texture = SubResource("AtlasTexture_qbwhy")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fxwl7"]
+atlas = ExtResource("1_rpqwa")
+region = Rect2(59, 155, 26, 26)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f33qi"]
+texture = SubResource("AtlasTexture_fxwl7")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qxjhn"]
+atlas = ExtResource("1_rpqwa")
+region = Rect2(59, 59, 26, 26)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5gi0c"]
+texture = SubResource("AtlasTexture_qxjhn")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_63rmd"]
+atlas = ExtResource("1_rpqwa")
+region = Rect2(504, 131, 35, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qbwhy"]
+texture = SubResource("AtlasTexture_63rmd")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 3.0
+region_rect = Rect2(0, 0, 35, 18)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_rpqwa"]
 atlas = ExtResource("1_rpqwa")
 region = Rect2(107, 59, 26, 26)
@@ -27,11 +95,8 @@ texture_margin_right = 4.0
 texture_margin_bottom = 4.0
 region_rect = Rect2(0, 0, 26, 26)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vespo"]
-load_path = "res://.godot/imported/basic_ui_sprites.png-f1365ff47f1f008f610f3c558cf47256.ctex"
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_rvk2n"]
-atlas = SubResource("CompressedTexture2D_vespo")
+atlas = ExtResource("1_rpqwa")
 region = Rect2(11, 11, 26, 28)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hrplk"]
@@ -41,11 +106,8 @@ texture_margin_top = 4.0
 texture_margin_right = 3.0
 texture_margin_bottom = 6.0
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_k5kyg"]
-load_path = "res://.godot/imported/basic_ui_sprites.png-f1365ff47f1f008f610f3c558cf47256.ctex"
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_vespo"]
-atlas = SubResource("CompressedTexture2D_k5kyg")
+atlas = ExtResource("1_rpqwa")
 region = Rect2(11, 59, 26, 28)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rvk2n"]
@@ -55,15 +117,12 @@ texture_margin_top = 4.0
 texture_margin_right = 3.0
 texture_margin_bottom = 6.0
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rpqwa"]
-load_path = "res://.godot/imported/basic_ui_sprites.png-f1365ff47f1f008f610f3c558cf47256.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_63rmd"]
-atlas = SubResource("CompressedTexture2D_rpqwa")
+[sub_resource type="AtlasTexture" id="AtlasTexture_hrplk"]
+atlas = ExtResource("1_rpqwa")
 region = Rect2(11, 107, 26, 28)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k5kyg"]
-texture = SubResource("AtlasTexture_63rmd")
+texture = SubResource("AtlasTexture_hrplk")
 texture_margin_left = 3.0
 texture_margin_top = 4.0
 texture_margin_right = 3.0
@@ -80,11 +139,8 @@ texture_margin_top = 4.0
 texture_margin_right = 3.0
 texture_margin_bottom = 6.0
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_63rmd"]
-load_path = "res://.godot/imported/basic_ui_sprites.png-f1365ff47f1f008f610f3c558cf47256.ctex"
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_k5kyg"]
-atlas = SubResource("CompressedTexture2D_63rmd")
+atlas = ExtResource("1_rpqwa")
 region = Rect2(11, 59, 26, 28)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vespo"]
@@ -97,6 +153,17 @@ texture_margin_bottom = 6.0
 [resource]
 DarkWoodPanel/base_type = &"PanelContainer"
 DarkWoodPanel/styles/panel = SubResource("StyleBoxTexture_oy5v3")
+DayAndNightButton/base_type = &"Button"
+DayAndNightButton/styles/disabled = SubResource("StyleBoxTexture_egbks")
+DayAndNightButton/styles/focus = SubResource("StyleBoxTexture_64sb7")
+DayAndNightButton/styles/hover = SubResource("StyleBoxTexture_wgy6h")
+DayAndNightButton/styles/normal = SubResource("StyleBoxTexture_f33qi")
+DayAndNightButton/styles/pressed = SubResource("StyleBoxTexture_5gi0c")
+DayAndNightCounterPanel/base_type = &"PanelContainer"
+DayAndNightCounterPanel/styles/panel = SubResource("StyleBoxTexture_qbwhy")
+DayAndNightLabel/base_type = &"Label"
+DayAndNightLabel/font_sizes/font_size = 18
+DayAndNightLabel/fonts/font = ExtResource("2_k5kyg")
 InventoryItemPanel/base_type = &"PanelContainer"
 InventoryItemPanel/styles/panel = SubResource("StyleBoxTexture_g4v7s")
 InventoryLabel/base_type = &"Label"
