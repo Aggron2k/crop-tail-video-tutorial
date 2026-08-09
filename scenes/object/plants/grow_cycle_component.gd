@@ -19,8 +19,8 @@ func on_time_tick_day(day: int) -> void:
 		if starting_day == 0:
 			starting_day = day
 			
-		growth_states(starting_day)
-		harvest_state(starting_day)
+		growth_states(starting_day, day)
+		harvest_state(starting_day, day)
 			
 func growth_states(starting_day: int, current_day: int):
 	if current_growth_state == DataTypes.GrowthStates.Maturity:
