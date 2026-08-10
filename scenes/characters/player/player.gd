@@ -7,7 +7,9 @@ extends CharacterBody2D
 var player_direction: Vector2
 
 func _ready() -> void:
+	add_to_group("player")
 	ToolManager.tool_selected.connect(on_tool_selected)
+
 	
 func on_tool_selected(tool: DataTypes.Tools) -> void:
 	current_tool = tool
