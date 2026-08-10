@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://ctt166m8hn32c" path="res://scenes/components/field_cursor_component.tscn" id="3_ybuqf"]
 [ext_resource type="Script" uid="uid://ybqyi4sut2nd" path="res://scenes/components/field_cursor_component.gd" id="4_71mpf"]
 [ext_resource type="PackedScene" uid="uid://djmv37trgdhyu" path="res://scenes/UI/game_screen.tscn" id="4_j2kjd"]
+[ext_resource type="PackedScene" uid="uid://jmc6yw75liso" path="res://scenes/components/crops_cursor_component.tscn" id="7_71mpf"]
+[ext_resource type="Script" uid="uid://n7dxd1a20y5i" path="res://scenes/components/crops_cursor_component.gd" id="8_jdj2i"]
 
 [node name="TestSceneCropsFieldTilledDirt" type="Node2D" unique_id=985430383]
 
@@ -40,6 +42,9 @@ tile_set = ExtResource("2_71mpf")
 script = ExtResource("4_71mpf")
 grass_tilemap_layer = NodePath("../GameTileMap/Grass")
 tilled_soil_tilemap_layer = NodePath("../GameTileMap/TilledSoil")
+
+[node name="CropsCursorComponent" parent="." unique_id=1265662544 instance=ExtResource("7_71mpf")]
+script = ExtResource("8_jdj2i")
 
 [node name="Player" parent="." unique_id=1194622027 instance=ExtResource("3_jdj2i")]
 position = Vector2(253, 219)
