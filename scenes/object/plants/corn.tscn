@@ -11,6 +11,7 @@
 size = Vector2(13, 8)
 
 [node name="Corn" type="Node2D" unique_id=756463469]
+y_sort_enabled = true
 script = ExtResource("1_hmplj")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1923204728]

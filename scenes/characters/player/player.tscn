@@ -406,12 +406,11 @@ collision_layer = 2
 script = ExtResource("2_hss88")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=880614173]
-position = Vector2(0, -8)
+position = Vector2(0, -3)
 sprite_frames = SubResource("SpriteFrames_omk8d")
-animation = &"chopping_front"
+animation = &"idle_front"
 autoplay = "idle_front"
-frame = 1
-frame_progress = 1.0
+offset = Vector2(0, -5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1333633471]
 position = Vector2(0, -4)
