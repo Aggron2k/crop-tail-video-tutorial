@@ -43,8 +43,10 @@ script = ExtResource("4_71mpf")
 grass_tilemap_layer = NodePath("../GameTileMap/Grass")
 tilled_soil_tilemap_layer = NodePath("../GameTileMap/TilledSoil")
 
-[node name="CropsCursorComponent" parent="." unique_id=1265662544 instance=ExtResource("7_71mpf")]
+[node name="CropsCursorComponent" parent="." unique_id=1265662544 node_paths=PackedStringArray("tilled_soil_tilemap_layer", "player") instance=ExtResource("7_71mpf")]
 script = ExtResource("8_jdj2i")
+tilled_soil_tilemap_layer = NodePath("../GameTileMap/TilledSoil")
+player = NodePath("../Player")
 
 [node name="Player" parent="." unique_id=1194622027 instance=ExtResource("3_jdj2i")]
 position = Vector2(253, 219)
