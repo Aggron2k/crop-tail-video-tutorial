@@ -8,6 +8,7 @@ extends PanelContainer
 
 func _ready() -> void:
 	ToolManager.enable_tool.connect(on_enable_tool_button)
+	ToolManager.tool_selected.connect(on_tool_selected)
 
 	tool_tilling.disabled = true
 	tool_tilling.focus_mode = Control.FOCUS_NONE
@@ -21,21 +22,53 @@ func _ready() -> void:
 	tool_tomato.disabled = true
 	tool_tomato.focus_mode = Control.FOCUS_NONE
 
+	_setup_button_hover(tool_axe, DataTypes.Tools.AxeWood)
+	_setup_button_hover(tool_tilling, DataTypes.Tools.TillGround)
+	_setup_button_hover(tool_watering_can, DataTypes.Tools.WaterCrops)
+	_setup_button_hover(tool_corn, DataTypes.Tools.PlantCorn)
+	_setup_button_hover(tool_tomato, DataTypes.Tools.PlantTomato)
 
-func on_tool_selected(tool: DataTypes.Tools) -> void:
+	if ToolManager.selected_tool != DataTypes.Tools.None:
+		on_tool_selected(ToolManager.selected_tool)
+
+
+func _setup_button_hover(button: Button, tool: DataTypes.Tools) -> void:
+	button.mouse_entered.connect(func(): _on_tool_mouse_entered(button))
+	button.mouse_exited.connect(func(): _on_tool_mouse_exited(button, tool))
+
+
+func _on_tool_mouse_entered(button: Button) -> void:
+	if button.has_focus():
+		button.release_focus()
+
+
+func _on_tool_mouse_exited(button: Button, tool: DataTypes.Tools) -> void:
+	if ToolManager.selected_tool == tool and not button.disabled:
+		button.grab_focus()
+
+
+func get_button_for_tool(tool: DataTypes.Tools) -> Button:
 	match tool:
 		DataTypes.Tools.AxeWood:
-			tool_axe.grab_focus()
+			return tool_axe
 		DataTypes.Tools.TillGround:
-			tool_tilling.grab_focus()
+			return tool_tilling
 		DataTypes.Tools.WaterCrops:
-			tool_watering_can.grab_focus()
+			return tool_watering_can
 		DataTypes.Tools.PlantCorn:
-			tool_corn.grab_focus()
+			return tool_corn
 		DataTypes.Tools.PlantTomato:
-			tool_tomato.grab_focus()
-		DataTypes.Tools.None:
-			release_all_focus()
+			return tool_tomato
+		_:
+			return null
+
+
+func on_tool_selected(tool: DataTypes.Tools) -> void:
+	release_all_focus()
+	var button: Button = get_button_for_tool(tool)
+	if button and not button.disabled:
+		if not button.is_hovered():
+			button.grab_focus()
 
 
 func release_all_focus() -> void:
