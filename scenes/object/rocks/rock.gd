@@ -19,9 +19,8 @@ func on_max_damage_reached() -> void:
 	call_deferred("add_stone_scene")
 	print("max damage reached: stone")
 	queue_free()
-	
+
 func add_stone_scene() -> void:
 	var stone_instance = stone_scene.instantiate() as Node2D
 	stone_instance.global_position = global_position
 	get_parent().add_child(stone_instance)
-	

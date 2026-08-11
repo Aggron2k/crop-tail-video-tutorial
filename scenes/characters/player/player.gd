@@ -10,7 +10,7 @@ func _ready() -> void:
 	add_to_group("player")
 	ToolManager.tool_selected.connect(on_tool_selected)
 
-	
+
 func on_tool_selected(tool: DataTypes.Tools) -> void:
 	current_tool = tool
 	hit_component.current_tool = tool

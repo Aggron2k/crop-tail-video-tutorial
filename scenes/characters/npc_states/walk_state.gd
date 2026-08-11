@@ -14,9 +14,9 @@ func _ready() -> void:
 
 func character_setup() -> void:
 	await get_tree().physics_frame
-	
+
 	set_movement_target()
-	
+
 
 func set_movement_target() -> void:
 	var target_position: Vector2 = NavigationServer2D.map_get_random_point(navigation_agent_2d.get_navigation_map(), navigation_agent_2d.navigation_layers, false)
@@ -32,23 +32,23 @@ func _on_physics_process(_delta : float) -> void:
 		character.current_walk_cycle += 1
 		set_movement_target()
 		return
-	
+
 	var target_position: Vector2 = navigation_agent_2d.get_next_path_position()
 	var target_direction: Vector2 = character.global_position.direction_to(target_position)
-	
-	
+
+
 	var velocity: Vector2 = target_direction * speed
-	
+
 	if navigation_agent_2d.avoidance_enabled:
 		animated_sprite_2d.flip_h = velocity.x < 0
 		navigation_agent_2d.velocity = velocity
 	else:
 		character.velocity = velocity
 		character.move_and_slide()
-		
+
 	character.velocity = target_direction * speed
 	character.move_and_slide()
-	
+
 func on_safe_velocity_computed(safe_velocity: Vector2) -> void:
 	animated_sprite_2d.flip_h = safe_velocity.x < 0
 	character.velocity = safe_velocity

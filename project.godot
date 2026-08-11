@@ -21,11 +21,12 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 ToolManager="*uid://o75v6tm18f3m"
 InventoryManager="*uid://5vtua4ex1gcf"
 DayAndNightCycleManager="*uid://cungqav46c63s"
 SaveGameManager="*uid://di2nunkqv4xvs"
+DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+GameDialogueManager="*uid://uqpteocrilyi"
 
 [display]
 

@@ -13,18 +13,18 @@ var growth_state: DataTypes.GrowthStates = DataTypes.GrowthStates.Germination
 func _ready() -> void:
 	watering_particles.emitting = false
 	flowering_particles.emitting = false
-	
+
 	hurt_component.hurt.connect(on_hurt)
 	grow_cycle_component.crop_maturity.connect(on_crop_maturity)
 	grow_cycle_component.crop_harvesting.connect(on_crop_harvesting)
-	
+
 func _process(delta: float) -> void:
 	growth_state = grow_cycle_component.get_current_growth_state()
 	sprite_2d.frame = growth_state
-	
+
 	if growth_state == DataTypes.GrowthStates.Maturity:
 		flowering_particles.emitting = true
-	
+
 func on_hurt(hit_damage: int) -> void:
 	if !grow_cycle_component.is_watered:
 		watering_particles.emitting = true

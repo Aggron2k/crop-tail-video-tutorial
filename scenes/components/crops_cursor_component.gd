@@ -28,12 +28,12 @@ func _unhandled_input(event: InputEvent) -> void:
 		if ToolManager.selected_tool == DataTypes.Tools.TillGround:
 			get_cell_under_mouse()
 			remove_crop()
-			
+
 	if event.is_action_pressed("hit"):
 		if ToolManager.selected_tool == DataTypes.Tools.PlantCorn or ToolManager.selected_tool == DataTypes.Tools.PlantTomato:
 			get_cell_under_mouse()
 			add_crop()
-			
+
 func get_cell_under_mouse() -> void:
 	if !player:
 		player = get_tree().get_first_node_in_group("player") as Player
@@ -56,11 +56,11 @@ func add_crop() -> void:
 			var tomato_instance = tomato_plant_scene.instantiate() as Node2D
 			tomato_instance.global_position = local_cell_position
 			crop_fields.add_child(tomato_instance)
-			
+
 func remove_crop() -> void:
 	if distance < 20.0 and crop_fields:
 		var crop_nodes = crop_fields.get_children()
-		
+
 		for node: Node2D in crop_nodes:
 			if node.global_position == local_cell_position:
 				node.queue_free()

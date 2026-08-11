@@ -6,7 +6,7 @@ extends NodeState
 
 func _on_process(_delta : float) -> void:
 	pass
-	
+
 func _ready() -> void:
 	hit_component_collision_shape.disabled = true
 	hit_component_collision_shape.position = Vector2(0, 0)
@@ -39,7 +39,7 @@ func _on_enter() -> void:
 	else:
 		animated_sprite_2d.play("watering_front")
 		hit_component_collision_shape.position = Vector2(0, 3)
-		
+
 	hit_component_collision_shape.disabled = false
 
 

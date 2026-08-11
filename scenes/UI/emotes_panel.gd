@@ -5,7 +5,7 @@ var idle_emotes: Array = ["emote_1_idle", "emote_2_smile", "emote_3_ear_wave", "
 
 func _ready() -> void:
 	animated_sprite_2d.play("emote_1_idle")
-	
+
 func play_emote(animation:String) -> void:
 	animated_sprite_2d.play(animation)
 

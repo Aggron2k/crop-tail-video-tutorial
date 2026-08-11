@@ -11,11 +11,11 @@ func _ready() -> void:
 func save_data() -> NodeDataResource:
 	if parent_node == null:
 		return null
-		
+
 	if save_data_resource == null:
 		push_error("save_data_resource is null on: ", parent_node.name)
 		return null
-		
+
 	save_data_resource._save_data(parent_node)
-	
+
 	return save_data_resource
