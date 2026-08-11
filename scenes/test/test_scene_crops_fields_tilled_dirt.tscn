@@ -14,8 +14,11 @@
 [ext_resource type="Script" uid="uid://vq2ecx7m670x" path="res://scenes/components/save_level_data_component.gd" id="10_hge7i"]
 [ext_resource type="PackedScene" uid="uid://cshcqavmbxx2c" path="res://scenes/components/test_scene_save_data_manager_component.tscn" id="11_hge7i"]
 [ext_resource type="PackedScene" uid="uid://c5ul5o4gg767s" path="res://scenes/object/plants/corn.tscn" id="12_kbbyr"]
+[ext_resource type="PackedScene" uid="uid://c1nu8gupekfih" path="res://scenes/components/test_scene_enable_tool_buttons_component.tscn" id="15_n62uo"]
 
 [node name="TestSceneCropsFieldTilledDirt" type="Node2D" unique_id=985430383]
+
+[node name="TestSceneEnableToolButtonsComponent" parent="." unique_id=573645980 instance=ExtResource("15_n62uo")]
 
 [node name="TestSceneSaveDataManagerComponent" parent="." unique_id=1468278336 instance=ExtResource("11_hge7i")]
 
