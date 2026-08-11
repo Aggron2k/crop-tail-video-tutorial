@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://djmv37trgdhyu" path="res://scenes/UI/game_screen.tscn" id="4_j2kjd"]
 [ext_resource type="PackedScene" uid="uid://jmc6yw75liso" path="res://scenes/components/crops_cursor_component.tscn" id="7_71mpf"]
 [ext_resource type="Script" uid="uid://n7dxd1a20y5i" path="res://scenes/components/crops_cursor_component.gd" id="8_jdj2i"]
+[ext_resource type="PackedScene" uid="uid://dvdc44vmo51f4" path="res://scenes/components/save_level_data_component.tscn" id="9_u8hcv"]
+[ext_resource type="Script" uid="uid://vq2ecx7m670x" path="res://scenes/components/save_level_data_component.gd" id="10_hge7i"]
 
 [node name="TestSceneCropsFieldTilledDirt" type="Node2D" unique_id=985430383]
 
@@ -53,3 +55,6 @@ position = Vector2(253, 219)
 current_tool = 2
 
 [node name="GameScreen" parent="." unique_id=96785484 instance=ExtResource("4_j2kjd")]
+
+[node name="SaveLevelDataComponent" parent="." unique_id=2030904274 instance=ExtResource("9_u8hcv")]
+script = ExtResource("10_hge7i")

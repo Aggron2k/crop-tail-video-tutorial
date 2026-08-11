@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://b5y714fwkdxe2" path="res://scenes/object/plants/flowering_particles.tscn" id="3_6jw6m"]
 [ext_resource type="PackedScene" uid="uid://b0wq4m68288bs" path="res://scenes/object/plants/grow_cycle_component.tscn" id="4_6jw6m"]
 [ext_resource type="PackedScene" uid="uid://b1jp2d2banekv" path="res://scenes/components/hurt_component.tscn" id="5_oluvs"]
+[ext_resource type="PackedScene" uid="uid://b81hffvbff22q" path="res://scenes/components/save_data_component.tscn" id="7_0py4k"]
+[ext_resource type="Resource" uid="uid://b0gf1f1auk7i2" path="res://resources/scene_data_resource.tres" id="8_1ivg1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oluvs"]
 size = Vector2(13, 7)
@@ -33,3 +35,6 @@ tool = 3
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtComponent" unique_id=249803474]
 position = Vector2(0.5, -1.5)
 shape = SubResource("RectangleShape2D_oluvs")
+
+[node name="SaveDataComponent" parent="." unique_id=1480043049 instance=ExtResource("7_0py4k")]
+save_data_resource = ExtResource("8_1ivg1")
