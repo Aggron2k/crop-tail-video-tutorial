@@ -5,6 +5,9 @@ Marlow: Welcome to your new farm.
 Marlow: As you can see the cows and hcickens are hungary.
 Marlow: You need to grow some crops to feed them.
 Marlow: Here are some seeds to grow some crops.
-do GameDialogueManager.action_give_cop_seeds()
-
+- Take crop seeds
+	Teemo: Yeah I can grow crops.
+	do GameDialogueManager.action_give_crop_seeds()
+- No, I dont' want them
+	Teemo: I'm not ready to grow my farm yet.
 => END
