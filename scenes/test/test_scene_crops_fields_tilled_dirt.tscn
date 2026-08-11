@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://ctt166m8hn32c" path="res://scenes/components/field_cursor_component.tscn" id="3_ybuqf"]
 [ext_resource type="Script" uid="uid://ybqyi4sut2nd" path="res://scenes/components/field_cursor_component.gd" id="4_71mpf"]
 [ext_resource type="PackedScene" uid="uid://djmv37trgdhyu" path="res://scenes/UI/game_screen.tscn" id="4_j2kjd"]
-[ext_resource type="Script" uid="uid://clft3j23ho7rf" path="res://scenes/components/save_data_component.gd" id="6_4m3ig"]
 [ext_resource type="PackedScene" uid="uid://jmc6yw75liso" path="res://scenes/components/crops_cursor_component.tscn" id="7_71mpf"]
 [ext_resource type="PackedScene" uid="uid://b81hffvbff22q" path="res://scenes/components/save_data_component.tscn" id="7_lkqxe"]
 [ext_resource type="Script" uid="uid://n7dxd1a20y5i" path="res://scenes/components/crops_cursor_component.gd" id="8_jdj2i"]
@@ -47,7 +46,6 @@ tile_set = ExtResource("2_71mpf")
 
 [node name="TilledSoil" type="TileMapLayer" parent="GameTileMap" unique_id=483961026]
 tile_set = ExtResource("2_71mpf")
-script = ExtResource("6_4m3ig")
 
 [node name="SaveDataComponent" parent="GameTileMap/TilledSoil" unique_id=1480043049 instance=ExtResource("7_lkqxe")]
 save_data_resource = ExtResource("8_n62uo")
