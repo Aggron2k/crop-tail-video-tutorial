@@ -47,7 +47,7 @@ position = Vector2(0, -8)
 sprite_frames = SubResource("SpriteFrames_g4v7s")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.859236
+frame_progress = 0.4670344
 
 [node name="InteractableComponent" parent="." unique_id=784479919 instance=ExtResource("3_g6y3g")]
 
