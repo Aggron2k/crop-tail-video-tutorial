@@ -1,4 +1,4 @@
-class_name FiledCursorComponent
+class_name FieldCursorComponent
 extends Node2D
 
 @export var grass_tilemap_layer: TileMapLayer
