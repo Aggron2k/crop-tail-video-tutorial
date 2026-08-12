@@ -494,6 +494,7 @@ scenes/2/scene = ExtResource("6_pi5w0")
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_ow828"]
 scenes/1/scene = ExtResource("7_ow828")
+scenes/2/scene = ExtResource("6_pi5w0")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mt8is"]
 texture = ExtResource("8_4agr7")

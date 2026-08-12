@@ -108,6 +108,7 @@ func on_idle_state_timeout() -> void:
 "
 
 [node name="Chicken" type="CharacterBody2D" unique_id=1517388262]
+y_sort_enabled = true
 collision_layer = 64
 script = ExtResource("1_r6a33")
 
