@@ -6,6 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://dqxqmy0atnush" path="res://scenes/components/interactable_label_component.tscn" id="3_cihct"]
 [ext_resource type="PackedScene" uid="uid://5ynp4h3y2mk6" path="res://scenes/components/feed_component.tscn" id="4_v3o53"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(16, 14)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_cl3vf"]
 atlas = ExtResource("1_cl3vf")
 region = Rect2(192, 0, 48, 48)
@@ -106,8 +109,13 @@ radius = 23.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_v3o53"]
 
-[node name="Chest" type="Node2D" unique_id=1821167059]
+[node name="Chest" type="StaticBody2D" unique_id=398071166]
 script = ExtResource("1_cax2m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2028196270]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_g4v7s")
+debug_color = Color(0.9669604, 0.021941846, 0.46681285, 0.41960785)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=609295716]
 sprite_frames = SubResource("SpriteFrames_gsnxe")
