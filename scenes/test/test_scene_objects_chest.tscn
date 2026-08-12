@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://b1iyickroe5da" path="res://scenes/characters/player/player.tscn" id="2_laiku"]
 [ext_resource type="PackedScene" uid="uid://djmv37trgdhyu" path="res://scenes/UI/game_screen.tscn" id="3_0qf2n"]
 [ext_resource type="PackedScene" uid="uid://b6t70nvb5x5ha" path="res://scenes/object/chest/chest.tscn" id="4_uhn3q"]
+[ext_resource type="PackedScene" uid="uid://ktrtmbwrysob" path="res://scenes/object/plants/corn_harvest.tscn" id="7_knitj"]
+[ext_resource type="PackedScene" uid="uid://g7rglg3fsmp1" path="res://scenes/object/plants/tomato_harvest.tscn" id="8_ed2dk"]
 
 [node name="TestSceneObjectsChest" type="Node2D" unique_id=985430383]
 y_sort_enabled = true
@@ -27,8 +29,34 @@ position = Vector2(-1, 0)
 tile_map_data = PackedByteArray("AAAXAAoAAwADAAAAAAAZAAoAAwAFAAAAAAAbAAoAAwAGAAAAAAAdAAoAAwAHAAAAAAAfAAoAAwAIAAAAAAAXAAwAAwADAAIAAAAZAAwAAwAEAAIAAAAbAAwAAwAFAAIAAAAdAAwAAwABAAMAAAAfAAwAAwAAAAMAAAAXAA4AAwAGAAIAAAAZAA4AAwAHAAIAAAAbAA4AAwAIAAIAAAAdAA4AAwAFAAMAAAAfAA4AAwAGAAMAAAAXABAAAwAHAAMAAAAZABAAAwAFAAQAAAAbABAAAwAGAAQAAAAdABAAAwAHAAQAAAAfABAAAwAIAAQAAAAVABAAAwABAAMAAAAVAA4AAwAAAAMAAAA=")
 tile_set = ExtResource("1_0pph3")
 
+[node name="HarvestCollectables" type="Node2D" parent="." unique_id=1717926460]
+
+[node name="TomatoHarvest" parent="HarvestCollectables" unique_id=716890472 instance=ExtResource("8_ed2dk")]
+position = Vector2(209, 253)
+
+[node name="TomatoHarvest3" parent="HarvestCollectables" unique_id=1711688317 instance=ExtResource("8_ed2dk")]
+position = Vector2(291, 242)
+
+[node name="TomatoHarvest4" parent="HarvestCollectables" unique_id=646736598 instance=ExtResource("8_ed2dk")]
+position = Vector2(313, 244)
+
+[node name="TomatoHarvest2" parent="HarvestCollectables" unique_id=275616718 instance=ExtResource("8_ed2dk")]
+position = Vector2(234, 252)
+
+[node name="CornHarvest" parent="HarvestCollectables" unique_id=761907848 instance=ExtResource("7_knitj")]
+position = Vector2(207, 223)
+
+[node name="CornHarvest4" parent="HarvestCollectables" unique_id=934959360 instance=ExtResource("7_knitj")]
+position = Vector2(313, 219)
+
+[node name="CornHarvest3" parent="HarvestCollectables" unique_id=1394737465 instance=ExtResource("7_knitj")]
+position = Vector2(292, 219)
+
+[node name="CornHarvest2" parent="HarvestCollectables" unique_id=2025465715 instance=ExtResource("7_knitj")]
+position = Vector2(236, 225)
+
 [node name="Player" parent="." unique_id=1194622027 instance=ExtResource("2_laiku")]
-position = Vector2(231, 222)
+position = Vector2(146, 221)
 current_tool = 2
 
 [node name="GameScreen" parent="." unique_id=96785484 instance=ExtResource("3_0qf2n")]
