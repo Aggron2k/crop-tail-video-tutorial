@@ -107,7 +107,7 @@ show_dialogue={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://dialogue/converstaions/guide.dialogue")
+locale/translations_pot_files=PackedStringArray("res://dialogue/converstaions/guide.dialogue", "res://dialogue/converstaions/chest.dialogue")
 
 [layer_names]
 
@@ -120,6 +120,7 @@ locale/translations_pot_files=PackedStringArray("res://dialogue/converstaions/gu
 2d_physics/layer_5="Object"
 2d_physics/layer_6="Collectable"
 2d_physics/layer_7="NPC"
+2d_physics/layer_8="Food"
 
 [rendering]
 

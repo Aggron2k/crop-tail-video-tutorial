@@ -1,0 +1,21 @@
+~ start_cow_pasture_box
+
+Pasture Box: [[Hi|Hello|Howdy]], your animals are hungary.
+Pasture Box: Would you like to feed your cows?
+- Yes
+	Marlow: Yeah! Lets feed my cows.
+- No
+	Marlow: No, I don't need to feed them. I have enough milk.
+
+=> END
+
+~ start_chicken_pasture_box
+
+Pasture Box: [[Hi|Hello|Howdy]], your animals are hungary.
+Pasture Box: Would you like to feed your chicken?
+- Yes
+	Marlow: Yeah! Lets feed my chickens.
+- No
+	Marlow: No, I don't need to feed them. I have enough eggs.
+
+=> END
