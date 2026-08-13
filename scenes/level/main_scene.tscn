@@ -2,10 +2,15 @@
 
 [ext_resource type="PackedScene" uid="uid://djmv37trgdhyu" path="res://scenes/UI/game_screen.tscn" id="1_b7hvd"]
 [ext_resource type="PackedScene" uid="uid://ddre37dbts5su" path="res://scenes/components/day_night_cycle_component.tscn" id="2_bhehb"]
+[ext_resource type="Texture2D" uid="uid://f2gcaryxgxi" path="res://assets/ui/mouse_icon.png" id="2_fixvu"]
 [ext_resource type="PackedScene" uid="uid://232phhmdkxqc" path="res://scenes/level/level_1.tscn" id="2_se67n"]
 [ext_resource type="PackedScene" uid="uid://b1iyickroe5da" path="res://scenes/characters/player/player.tscn" id="3_i5yyg"]
+[ext_resource type="PackedScene" uid="uid://ccgangpkphty2" path="res://scenes/components/mouse_cursor_component.tscn" id="5_03seo"]
 
 [node name="MainScene" type="Node" unique_id=192742336]
+
+[node name="MouseCursorComponent" parent="." unique_id=107533032 instance=ExtResource("5_03seo")]
+cursor_component_texture = ExtResource("2_fixvu")
 
 [node name="DayNightCycleComponent" parent="." unique_id=2050428478 instance=ExtResource("2_bhehb")]
 

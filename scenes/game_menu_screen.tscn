@@ -2,10 +2,15 @@
 
 [ext_resource type="Script" uid="uid://b66bkmg6ol07j" path="res://scenes/game_menu_screen.gd" id="1_3ffun"]
 [ext_resource type="Theme" uid="uid://csl0invwy37p6" path="res://scenes/UI/game_ui_theme.tres" id="1_dkf86"]
+[ext_resource type="PackedScene" uid="uid://ccgangpkphty2" path="res://scenes/components/mouse_cursor_component.tscn" id="2_icf56"]
 [ext_resource type="PackedScene" uid="uid://3dhfugdrcqob" path="res://scenes/UI/game_menu_screen_background.tscn" id="2_t26fm"]
+[ext_resource type="Texture2D" uid="uid://f2gcaryxgxi" path="res://assets/ui/mouse_icon.png" id="3_ajymb"]
 
 [node name="GameMenuScreen" type="CanvasLayer" unique_id=1198401684]
 script = ExtResource("1_3ffun")
+
+[node name="MouseCursorComponent" parent="." unique_id=107533032 instance=ExtResource("2_icf56")]
+cursor_component_texture = ExtResource("3_ajymb")
 
 [node name="GameMenuScreenBackGorund" parent="." unique_id=456193488 instance=ExtResource("2_t26fm")]
 position = Vector2(3, -41)

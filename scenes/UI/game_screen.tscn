@@ -1,12 +1,17 @@
 [gd_scene format=3 uid="uid://djmv37trgdhyu"]
 
 [ext_resource type="PackedScene" uid="uid://drgksm5uh5mrf" path="res://scenes/UI/tools_panel.tscn" id="1_anxoc"]
+[ext_resource type="PackedScene" uid="uid://ccgangpkphty2" path="res://scenes/components/mouse_cursor_component.tscn" id="1_bb5g6"]
 [ext_resource type="Theme" uid="uid://csl0invwy37p6" path="res://scenes/UI/game_ui_theme.tres" id="1_erthd"]
 [ext_resource type="PackedScene" uid="uid://c530n4el26qkp" path="res://scenes/UI/emotes_panel.tscn" id="2_hws2h"]
+[ext_resource type="Texture2D" uid="uid://f2gcaryxgxi" path="res://assets/ui/mouse_icon.png" id="2_y3ygk"]
 [ext_resource type="PackedScene" uid="uid://bpay6g7ocncqf" path="res://scenes/UI/inventory_panel.tscn" id="3_t76gd"]
 [ext_resource type="PackedScene" uid="uid://qqkaeikjlvfh" path="res://scenes/UI/day_and_night_panel.tscn" id="4_ht8k8"]
 
 [node name="GameScreen" type="CanvasLayer" unique_id=96785484]
+
+[node name="MouseCursorComponent" parent="." unique_id=107533032 instance=ExtResource("1_bb5g6")]
+cursor_component_texture = ExtResource("2_y3ygk")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1613263569]
 anchors_preset = 15
