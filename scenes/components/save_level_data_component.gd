@@ -8,6 +8,11 @@ var game_data_resource: SaveGameDataResource
 func _ready() -> void:
 	add_to_group("save_level_data_component")
 	level_scene_name = get_parent().name
+	SaveGameManager.allow_save_game = true
+
+func _exit_tree() -> void:
+	SaveGameManager.allow_save_game = false
+
 
 func save_node_data() -> void:
 	var nodes = get_tree().get_nodes_in_group("save_data_component")

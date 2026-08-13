@@ -11,6 +11,7 @@ func start_game() -> void:
 	SceneManager.load_main_scene_container()
 	SceneManager.load_level("Level1")
 	SaveGameManager.load_game()
+	SaveGameManager.allow_save_game = true
 	
 func exit_game() -> void:
 	get_tree().quit()
