@@ -19,6 +19,10 @@ run/main_scene="uid://bpcn0a6ej2s42"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://1uncixnwnpdu"
+
 [autoload]
 
 ToolManager="*uid://o75v6tm18f3m"
@@ -49,6 +53,7 @@ enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 folder_colors={
 "res://Tilesets/": "yellow",
 "res://assets/": "orange",
+"res://audio/": "red",
 "res://dialogue/": "teal",
 "res://resources/": "purple",
 "res://scenes/": "green",

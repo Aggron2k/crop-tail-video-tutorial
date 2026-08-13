@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://232phhmdkxqc"]
 
 [ext_resource type="TileSet" uid="uid://dl7iqfnaunnuo" path="res://Tilesets/game_tile_set.tres" id="1_2lb6k"]
+[ext_resource type="PackedScene" uid="uid://bco7ou853uwpg" path="res://audio/music/on_the_farm_music.tscn" id="1_q27gu"]
 [ext_resource type="PackedScene" uid="uid://dvdc44vmo51f4" path="res://scenes/components/save_level_data_component.tscn" id="1_vigbq"]
 [ext_resource type="PackedScene" uid="uid://cn0dqet2ml2r8" path="res://scenes/houses/large_house.tscn" id="2_2lb6k"]
 [ext_resource type="PackedScene" uid="uid://dupc5ee4588ok" path="res://scenes/characters/chicken/chicken.tscn" id="3_ybxn4"]
@@ -28,6 +29,9 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(190, 99, 352, 99, 519, 
 
 [node name="Level1" type="Node2D" unique_id=456193488]
 y_sort_enabled = true
+
+[node name="OnTheFarmMusic" parent="." unique_id=1524055319 instance=ExtResource("1_q27gu")]
+autoplay = true
 
 [node name="SaveLevelDataComponent" parent="." unique_id=2030904274 instance=ExtResource("1_vigbq")]
 
