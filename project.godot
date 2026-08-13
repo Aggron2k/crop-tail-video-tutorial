@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="CropTail VideoTutorial"
-run/main_scene="uid://bncdbyj4khpf7"
+run/main_scene="uid://bpcn0a6ej2s42"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -27,6 +27,8 @@ DayAndNightCycleManager="*uid://cungqav46c63s"
 SaveGameManager="*uid://di2nunkqv4xvs"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 GameDialogueManager="*uid://uqpteocrilyi"
+GameManager="*uid://vdi4ghcr4h0a"
+SceneManager="*uid://f4wx7nwsa8dy"
 
 [display]
 

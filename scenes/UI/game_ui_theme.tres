@@ -83,11 +83,78 @@ texture_margin_right = 2.0
 texture_margin_bottom = 3.0
 region_rect = Rect2(0, 0, 35, 18)
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_k5kyg"]
+load_path = "res://.godot/imported/basic_ui_sprites.png-f1365ff47f1f008f610f3c558cf47256.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_egbks"]
+atlas = SubResource("CompressedTexture2D_k5kyg")
+region = Rect2(11, 11, 26, 28)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3lqly"]
+texture = SubResource("AtlasTexture_egbks")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 6.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mymdo"]
+load_path = "res://.godot/imported/basic_ui_sprites.png-f1365ff47f1f008f610f3c558cf47256.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_64sb7"]
+atlas = SubResource("CompressedTexture2D_mymdo")
+region = Rect2(11, 59, 26, 28)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_taxkl"]
+texture = SubResource("AtlasTexture_64sb7")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 6.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qxjhn"]
+load_path = "res://.godot/imported/basic_ui_sprites.png-f1365ff47f1f008f610f3c558cf47256.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5gi0c"]
+atlas = SubResource("CompressedTexture2D_qxjhn")
+region = Rect2(11, 59, 26, 28)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1d4xv"]
+texture = SubResource("AtlasTexture_5gi0c")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 6.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yf5fn"]
+atlas = ExtResource("1_rpqwa")
+region = Rect2(11, 155, 26, 28)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g4v7s"]
+texture = SubResource("AtlasTexture_yf5fn")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 6.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_d7osq"]
+load_path = "res://.godot/imported/basic_ui_sprites.png-f1365ff47f1f008f610f3c558cf47256.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kxiar"]
+atlas = SubResource("CompressedTexture2D_d7osq")
+region = Rect2(11, 107, 26, 28)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ugbuu"]
+texture = SubResource("AtlasTexture_kxiar")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 6.0
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_rpqwa"]
 atlas = ExtResource("1_rpqwa")
 region = Rect2(107, 59, 26, 26)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g4v7s"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u7u1y"]
 texture = SubResource("AtlasTexture_rpqwa")
 texture_margin_left = 4.0
 texture_margin_top = 4.0
@@ -164,11 +231,20 @@ DayAndNightCounterPanel/styles/panel = SubResource("StyleBoxTexture_qbwhy")
 DayAndNightLabel/base_type = &"Label"
 DayAndNightLabel/font_sizes/font_size = 18
 DayAndNightLabel/fonts/font = ExtResource("2_k5kyg")
+GameMenuButton/base_type = &"Button"
+GameMenuButton/font_sizes/font_size = 18
+GameMenuButton/fonts/font = ExtResource("2_k5kyg")
+GameMenuButton/styles/disabled = SubResource("StyleBoxTexture_3lqly")
+GameMenuButton/styles/focus = SubResource("StyleBoxTexture_taxkl")
+GameMenuButton/styles/hover = SubResource("StyleBoxTexture_1d4xv")
+GameMenuButton/styles/normal = SubResource("StyleBoxTexture_g4v7s")
+GameMenuButton/styles/pressed = SubResource("StyleBoxTexture_ugbuu")
 InventoryItemPanel/base_type = &"PanelContainer"
-InventoryItemPanel/styles/panel = SubResource("StyleBoxTexture_g4v7s")
+InventoryItemPanel/styles/panel = SubResource("StyleBoxTexture_u7u1y")
 InventoryLabel/base_type = &"Label"
 InventoryLabel/font_sizes/font_size = 8
 InventoryLabel/fonts/font = ExtResource("2_63rmd")
+Label/fonts/font = ExtResource("2_k5kyg")
 MarginContainer/constants/margin_bottom = 10
 MarginContainer/constants/margin_left = 10
 MarginContainer/constants/margin_right = 10
